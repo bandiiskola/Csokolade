@@ -40,26 +40,19 @@ const Lapoz = (szam) => {
     } else if (index >= csokik.length) {
         index = 0
     }
-    if (szam == 1) {
-        if(document.getElementById("img").classList=)
-        x = "animate__SlideInLeft"
-    } else {
-        x = "animate__SlideInRight"
-    }
 }
 
 const Kirajzol = (x, t) => {
     var s = ""
-    s = "<img class='img animate__animated' src='assets/images/" + t[x].kep + "'>"
-    s += "<h1>" + t[x].nev + "</h1>"
-    s += "<p>" + t[x].kiszereles + "</p>"
-    s += "<p class='orszag'>" + t[x].orszag + "</p>"
+    s = "<img class='img animate__animated animate__fadeIn' src='assets/images/" + t[x].kep + "'>"
+    s += "<h1 class='animate__animated animate__fadeIn'>" + t[x].nev + "</h1>"
+    s += "<p class='animate__animated animate__fadeIn'>" + t[x].kiszereles + "</p>"
+    s += "<p class='orszag animate__animated animate__fadeIn'>" + t[x].orszag + "</p>"
     document.getElementById("kep").innerHTML = s
 }
 
 const Update = () => {
     Kirajzol(index, csokik)
-
 }
 
 Kirajzol(index, csokik)
