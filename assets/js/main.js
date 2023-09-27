@@ -1,3 +1,5 @@
+var index=0
+
 var csokik = [{
         nev: "Milka",
         kep: "Milka.png",
@@ -29,3 +31,30 @@ var csokik = [{
         orszag: "USA"
     }
 ]
+
+const Lapoz=(szam)=>{
+    index+=szam
+    if (index<0)
+    {
+        index=0
+    }
+    else if(index>csokik.length)
+    {
+        index=0
+    }
+}
+
+const Kirajzol = (x, t) => {
+    var s = ""
+    s = "<img class='w-100' src='assets/images/" + t[x].kep + "'>"
+    s += "<h1>" + t[x].nev + "</h1>"
+    s += "<p>" + t[x].kiszereles + "</p>"
+    s += "<p class='orszag'>" + t[x].orszag + "</p>"
+    document.getElementById("kep").innerHTML=s
+}
+
+const Update=() =>{
+    Kirajzol(index,csokik)
+}
+
+Kirajzol(index,csokik)
