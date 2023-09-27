@@ -2,6 +2,21 @@
     font-style: italic;
     margin-top: 2em;
 }
-.img{
+
+.img {
     height: 600px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+    height: 200px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background: #d34567;
 }
