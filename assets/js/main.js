@@ -38,7 +38,7 @@ const Lapoz=(szam)=>{
     {
         index=0
     }
-    else if(index>csokik.length)
+    else if(index>=csokik.length)
     {
         index=0
     }
@@ -46,7 +46,7 @@ const Lapoz=(szam)=>{
 
 const Kirajzol = (x, t) => {
     var s = ""
-    s = "<img class='w-100' src='assets/images/" + t[x].kep + "'>"
+    s = "<img class='w-100 img' src='assets/images/" + t[x].kep + "'>"
     s += "<h1>" + t[x].nev + "</h1>"
     s += "<p>" + t[x].kiszereles + "</p>"
     s += "<p class='orszag'>" + t[x].orszag + "</p>"
